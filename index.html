@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maya C. Umeh</title>
 <meta name="description" content="Maya C. Umeh, Computer Science (Artificial Intelligence) student at the University of Hertfordshire. Projects, certifications, skills, experience and CV.">
-<meta name="theme-color" content="#0b0c0d">
+<meta name="theme-color" content="#150a1c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0b0c0d; --card: #131516; --card2: #181a1c; --text: #f4f4f2; --muted: #9a9d9f; --dim: #5d6163;
-    --line: #232628; --ring: rgba(255,255,255,.07);
+    --bg: #150a1c; --card: #1f1129; --card2: #281634; --text: #fbf0ff; --muted: #c9a8d8; --dim: #8a6a9a;
+    --line: #3a2249; --ring: rgba(236,72,153,.16); --pink: #ff5fa8; --purple: #a855f7;
+    --grad: linear-gradient(120deg, #ff5fa8 0%, #c45cf2 55%, #8b5cf6 100%);
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -29,7 +30,7 @@
 
   nav { position: fixed; top: 16px; left: 0; right: 0; z-index: 10; padding: 0 16px; }
   .pill { max-width: 1060px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    background: rgba(17,19,20,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 999px; padding: 7px 7px 7px 22px; }
+    background: rgba(31,17,41,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line); border-radius: 999px; padding: 7px 7px 7px 22px; }
   .brand { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -.02em; white-space: nowrap; }
   .links { display: flex; gap: 4px; }
   .links a { padding: 8px 15px; border-radius: 999px; color: var(--muted); font-size: 15px; font-weight: 500; border: 1px solid transparent; transition: color .2s, background .2s; }
@@ -42,7 +43,7 @@
   .menu-btn span:nth-child(1) { top: 18px; } .menu-btn span:nth-child(2) { top: 26px; }
   nav.open .menu-btn span:nth-child(1) { top: 22px; transform: rotate(45deg); }
   nav.open .menu-btn span:nth-child(2) { top: 22px; transform: rotate(-45deg); }
-  .mobile-menu { display: none; max-width: 1060px; margin: 10px auto 0; background: rgba(17,19,20,.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  .mobile-menu { display: none; max-width: 1060px; margin: 10px auto 0; background: rgba(31,17,41,.96); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
     border: 1px solid var(--line); border-radius: 28px; padding: 14px; flex-direction: column; }
   .mobile-menu a { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -.02em; padding: 12px 14px; border-radius: 16px; color: var(--text); }
   .mobile-menu a:active, .mobile-menu a:hover { background: var(--card2); }
@@ -121,6 +122,20 @@
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease, border-color .3s; }
   .reveal.in { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  /* pink and purple accents */
+  h1.display, h2.display { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .cvbtn, .btn.white, .mobile-menu .cvbtn { background: var(--grad); color: #fff !important; border-color: transparent; }
+  .plink span { background: var(--grad); color: #fff; }
+  .kicker::before { background: var(--pink); box-shadow: 0 0 0 4px rgba(255,95,168,.25); }
+  .chip { color: #f3c6ff; border-color: #4a2a5c; background: #2a1638; }
+  .pmeta span:first-child, .cert .n { color: var(--pink); }
+  .pcard:hover, .btn:hover { border-color: var(--purple); }
+  .links a.active { background: rgba(168,85,247,.18); border-color: rgba(168,85,247,.45); }
+  .fact b, .lead b { color: #ffd1ec; }
+  .xp .when { color: var(--pink); }
+  ::selection { background: var(--pink); color: #fff; }
+  body { background: radial-gradient(1200px 700px at 85% -10%, rgba(168,85,247,.22), transparent 60%), radial-gradient(900px 600px at -10% 40%, rgba(255,95,168,.14), transparent 60%), var(--bg); background-attachment: fixed; }
 </style>
 </head>
 <body>
@@ -157,7 +172,7 @@
     <div class="facts">
       <span class="fact"><b>University of Hertfordshire</b></span>
       <span class="fact">Predicted <b>First Class Honours</b></span>
-      <span class="fact">Graduating <b>2028</b></span>
+      <span class="fact">Graduating <b>2027</b></span>
     </div>
     <div class="cta">
       <a class="btn white" href="Maya_Umeh_CV.pdf">Download CV</a>
@@ -261,7 +276,7 @@
       </div>
     </div>
     <div class="xp reveal">
-      <div class="when">2024 to 2028</div>
+      <div class="when">2024 to 2027</div>
       <div>
         <h3 class="display">University of Hertfordshire</h3>
         <div class="role">BSc (Hons) Computer Science (Artificial Intelligence) with Foundation Year</div>
